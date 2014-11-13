@@ -14,10 +14,12 @@ function changeColor(id){
 }
 
 function verifAnnee(){
-	var elt = document.getElementById(id);
-	if(isNaN(elt.value) || Number(elt.value) > 2050 || Number(elt.value) < 2000)
-		alert("ceci n'est pas un nombre");
-	return false;
+	var elt = document.getElementById("annee_plus");
+	if(isNaN(elt.value) || Number(elt.value) > 2050 || Number(elt.value) < 2000){
+		alert("Veuillez entrer une annéee valide entre 2000 et 2050");
+	}
+	else
+		document.getElementsByName('formNouveau')[0].submit();
 }
 </script>
 <title>PLANNING</title>
@@ -90,11 +92,11 @@ function verifAnnee(){
     </ol>
     </div>
     <div class='inline'>
-    <form action="save.php" method="POST" id="nouveau" >
+    <form action="save.php" method="POST" id="nouveau" name="formNouveau">
     <input type="hidden" value="1" name="new" />
     Ann&eacute;e : 
-   	<input type="text" name="annee" id="annee">
-    <button onclick="verifAnnee();">Ajouter un planning</button>
+   	<input type="text" name="annee" id="annee_plus">
+    <input type="button" onclick="verifAnnee();return false;" value="Ajouter un planning">
     </form>
     </div>
     </div>
