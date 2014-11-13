@@ -1,0 +1,45 @@
+body {
+	width: 950px;
+	margin: 0 250px;
+	background: url("../img/fl5.png");
+}
+
+table,tr,td {
+	border: 2px solid black;
+	border-collapse: collapse;
+	padding:5px;
+}
+
+.space {
+	padding: 20px 0;
+}
+
+#planning .style0 {
+	background: #FFDB83;
+}
+
+#planning .style1 {
+	background: #E06350;
+}
+
+#planning .style2 {
+	background: #BC8AFF;
+}
+
+#planning .style3 {
+	background: #FF42CA;
+}
+
+#planning .style4 {
+	background: #5F9EE8;
+}
+
+#planning .style5 {
+	background: #6FFF6F;
+}
+
+.inline {
+    position: absolute;
+    top: 82px;
+    left: 780px;
+}
